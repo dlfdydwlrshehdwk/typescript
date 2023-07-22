@@ -48,3 +48,14 @@ function 함수2(x? : string | number) :number{
 function 함수3(x? : number | boolean | string) {
 
 }
+
+type Asd = { color? : string , size : number, readonly position : number[] }
+
+type User = { name : string , phone : number , email : string }
+type Bl = { adult : boolean }
+type New = User & Bl;
+
+function 함수e( a :'kim'){
+    return a
+}
+함수e('kim')
