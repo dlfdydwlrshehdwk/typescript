@@ -59,3 +59,41 @@ function 함수e( a :'kim'){
     return a
 }
 함수e('kim')
+
+
+
+type Dh = {
+    name : string,
+    age : number,
+    t : string
+}
+let 동호 :Dh = {
+    name :'동호',
+    age : 29,
+    t : '의정부'
+}
+
+let Like : {
+    song : string,
+    singer : string
+} =
+{
+    song : '히히',
+    singer : '히히'
+}
+
+type Pj = {
+    member : string[],
+    days : number,
+    started : boolean
+}
+
+let project2 : Pj = {
+    member : ['안녕','히히/'],
+    days : 20,
+    started : true
+}
+
+let 회원들 :(number | string)[] = [1,'3',1]
+
+let 오브제 :{ a : string | number} = { a : '123'}
