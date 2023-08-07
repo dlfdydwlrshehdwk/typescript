@@ -1,99 +1,48 @@
-let 이름 :string = '동호';
-let 나이 :number = 27;
-let 출생지 :string = '의정부';
+let user :string = 'kim'
+let age :number | undefined = undefined;
+let married :boolean = false;
+let 철수 :(string | number | boolean)[] = [user,age,married]
 
-let 노래 : { 제목 : string , 가수명 : string} = { 제목 : "백예린" , 가수명 : "산책"}
-
-let project :{
-    member :(string | number)[],
-    days : number,
-    start : boolean,
-} = {
-    member : ['kim',1423],
-    days : 30,
-    start : true
-}
-
-let 회원 :number | string = '김';
-
-let user :string = 'kim';
-let age :undefined | number = undefined;
-let married : boolean = false; 
-let 철수 :(string | number | undefined | boolean)[] = [user, age, married];
-
-let 학교 :{
-    score : (number | boolean)[],
+let 학교 : {
+    score : (boolean | number)[],
     teacher : string,
-    friend : string | string[]
+    friend : string | string[],
 } = {
-    score : [100, 97, 84],
-    teacher : 'Phil',
-    friend : 'John'
+    score : [100,97,84],
+    teacher : 'phil',
+    friend : 'john'
 }
 학교.score[4] = false;
-학교.friend = ['Lee' , 학교.teacher]
+학교.friend = ['lee',학교.teacher]
 
-function 함수(x? : string){
-    if(x) {
-        console.log(x)
-    }
-    else { 
-        console.log('입력안됨')
-    }
+function 함수3 ( x? : string){
+    if(x){console.log(x)}
+    else console.log('이름이없음')
 }
-
-function 함수2(x? : string | number) :number{
+함수()
+function 함수2(x : string | number) :number{
     return x.toString().length
 }
-function 함수3(x? : number | boolean | string) {
+함수2(3325)
 
+function 결혼여부(q : number,w : boolean, e : string){
+    let a:number;
+    let b:number;
+    let c:number;
+    if(w) b = 500; else b = 0
+    a = q * 1
+    if(e == '상') c = 100
+    else c = 0;
+
+    if(a + b + c >= 600) return '결혼가능'
+    else null
 }
 
-type Asd = { color? : string , size : number, readonly position : number[] }
-
-type User = { name : string , phone : number , email : string }
-type Bl = { adult : boolean }
-type New = User & Bl;
-
-function 함수e( a :'kim'){
-    return a
-}
-함수e('kim')
+console.log(결혼여부(700,false,'중'))
+console.log(결혼여부(100,false,'상'))
 
 
-
-type Dh = {
-    name : string,
-    age : number,
-    t : string
-}
-let 동호 :Dh = {
-    name :'동호',
-    age : 29,
-    t : '의정부'
+function 함수(x :number | string){
+    return (x as number) + 1
 }
 
-let Like : {
-    song : string,
-    singer : string
-} =
-{
-    song : '히히',
-    singer : '히히'
-}
-
-type Pj = {
-    member : string[],
-    days : number,
-    started : boolean
-}
-
-let project2 : Pj = {
-    member : ['안녕','히히/'],
-    days : 20,
-    started : true
-}
-
-let 회원들 :(number | string)[] = [1,'3',1]
-
-let 오브제 :{ a : string | number} = { a : '123'}
