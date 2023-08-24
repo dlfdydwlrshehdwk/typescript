@@ -46,3 +46,12 @@ function 함수(x :number | string){
     return (x as number) + 1
 }
 
+type Person = {
+    readonly name : string
+}
+
+let 사람1 : Person = {
+    name : 'kim'
+}
+
+사람1.name = 'lee'
